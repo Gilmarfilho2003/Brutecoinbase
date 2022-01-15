@@ -29,7 +29,6 @@ file=open('passwords.txt','r')
 email=str(raw_input('Enter Email/Username : ').strip())
 
 print ("\nTarget Email ID : ",email)
-print "\nTrying Passwords from list ..."
 
 i=0
 while file:
