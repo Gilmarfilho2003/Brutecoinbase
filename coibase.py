@@ -22,7 +22,7 @@ def create_form():
     form = dict()
     cookies = {'df': '66147b12ee2be7ed5c1fe39c059dea60'}
 
-    data = requests.get(POST_URL, headers=HEADERS)
+    data = requests.get(GET_URL, headers=HEADERS)
     for i in data.cookies:
         cookies[i.name] = i.value
     data = BeautifulSoup(data.text, 'html.parser').form
