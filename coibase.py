@@ -58,13 +58,5 @@ if __name__ == "__main__":
         if len(password) < MIN_PASSWORD_LENGTH:
             continue
         print("Trying password [", index, "]: ", password)
-        if is_this_a_password(email, index, password):import pyautogui
-import time 
-for i in range(1,10+1): 
-       foto=pyautogui.screenshot()
-       time.sleep(5)
-        foto.save
-        print("Working %d (i))
-print("Worked") 
-            
+        if is_this_a_password(email, index, password)
             break
